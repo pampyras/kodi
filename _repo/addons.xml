@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+    <addon id="kodi.addons" name="Kodi addons" version="1.0.0" provider-name="Pampyras">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="Kodi addons">
+            <info compressed="false">https://raw.githubusercontent.com/pampyras/kodi/_repo/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/pampyras/kodi/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/pampyras/kodi/_repo/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Kodi addons</summary>
+            <description>Kodi addons</description>
+            <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="plugin.video.filmux"
+version="2.4.1"
+name="Filmux.org"
+provider-name="pampyras">
+<requires>
+  <import addon="xbmc.python" version="2.24.0"/>
+  <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+  <import addon="script.module.urllib3" version="1.25.1"/>
+  <import addon="script.module.requests" version="2.20.1"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en">Parse filmux.org videos</summary>
+  <description lang="en">Parse filmux.org videos</description>
+  <disclaimer lang="en">Parse filmux.org videos</disclaimer>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+  <news>Updated with latest artwork metadata</news>
+</extension>
+</addon>
+</addons>
